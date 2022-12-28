@@ -5,7 +5,8 @@
         "nyholm/psr7-server": "^1.0",
         "psr/container": "^1.0",
         "php-di/php-di": "^6.4",
-        "slim/twig-view": "^3.3"
+        "slim/twig-view": "^3.3",
+        "slim/php-view": "^3.2"
     },
     "autoload": {
         "psr-4": {

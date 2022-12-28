@@ -3,6 +3,7 @@
 use Psr\Container\ContainerInterface;
 use Slim\App;
 use Slim\Factory\AppFactory;
+use Slim\Views\PhpRenderer;
 
 return [
 	'settings' => function() {
@@ -14,9 +15,11 @@ return [
 	],*/
 
 	'view' => function ($container) {
-		$view = \Slim\Views\Twig::create(dirname(__DIR__, 1) . '/src/Views', [
+		/*$view = \Slim\Views\Twig::create(dirname(__DIR__, 1) . '/src/Views', [
 			'cache' => 'path/to/cache'
-		]);
+		]);*/
+
+		$view = new PhpRenderer(dirname(__DIR__, 1) . '/src/Views');
 
 		// Instantiate and add Slim specific extension
 		//$router = $container->get('router');

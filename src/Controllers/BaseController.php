@@ -19,6 +19,10 @@ class BaseController {
 	}
 
 	protected function render( Response $response, $file ) {
-		return $this->view->render( $response, $file );
+		//$view = $this->view->fetch( 'partials/header.php' );
+		//$view .= $this->view->fetch( $response, $file );
+		//$view .= $this->view->fetch( 'partials/footer.php' ); 
+
+		return $this->view->render( $response, $file, $this->data );
 	}
 }

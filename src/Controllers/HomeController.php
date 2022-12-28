@@ -10,11 +10,11 @@ class HomeController extends BaseController {
 
 	public function __construct( Container $container ) {
 		parent::__construct( $container );
+
+		$this->data['title'] = 'Home Page';
 	}
 
 	public function index( Request $request, Response $response, $args ) {
-		$v = $this->container->get('view');
-		//print_r($v);
 		return $this->render( $response, 'home.php' );
 	}
 
