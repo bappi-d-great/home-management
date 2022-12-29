@@ -19,7 +19,9 @@ return [
 			'cache' => 'path/to/cache'
 		]);*/
 
-		$view = new PhpRenderer(dirname(__DIR__, 1) . '/src/Views');
+		$view = new PhpRenderer(
+			dirname(__DIR__, 1) . '/src/Views'
+		);
 
 		// Instantiate and add Slim specific extension
 		//$router = $container->get('router');
